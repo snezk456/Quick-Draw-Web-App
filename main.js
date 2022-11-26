@@ -24,7 +24,15 @@ function setup() {
   background("white");
 }
 function draw() {
- check_sketch()
+  // Set stroke weight to 10
+   strokeWeight(13);
+   // Set stroke color to black
+   stroke(0);
+   // If mouse is pressed, draw line between previous and current mouse positions
+   if (mouseIsPressed) {
+     line(pmouseX, pmouseY, mouseX, mouseY);
+   }
+  check_sketch()
   if(drawn_sketch == sketch)
   {
     answer_holder = "set"
